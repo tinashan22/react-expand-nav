@@ -1,18 +1,18 @@
-import { ButtonTheme } from "@/app/constants";
+import { theme } from "@/app/constants";
 
 interface ButtonProps {
-  theme: ButtonTheme;
+  buttonTheme: theme;
 }
-export default function ContactUsButton({ theme }: ButtonProps) {
+export default function ContactUsButton({ buttonTheme }: ButtonProps) {
   return (
     <a
       className={`
       ${
-        theme === ButtonTheme.dark &&
+        buttonTheme === theme.dark &&
         "bg-neutral-950 text-white hover:bg-neutral-800"
       }
       ${
-        theme === ButtonTheme.light &&
+        buttonTheme === theme.light &&
         "bg-white text-neutral-950 hover:bg-neutral-200"
       }
       

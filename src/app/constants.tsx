@@ -1,4 +1,4 @@
-export enum ButtonTheme {
+export enum theme {
   dark,
   light,
 }
