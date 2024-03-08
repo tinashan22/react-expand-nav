@@ -12,7 +12,6 @@ export default function Scene() {
   return (
     <Canvas style={{ background: "#fff" }}>
       <Model />
-
       {/* <directionalLight color={"#fff"} intensity={3} position={[2, 6, 3]} /> */}
       <directionalLight color={"#0000FF"} intensity={3} position={[2, 6, 3]} />
       <directionalLight color={"#0000FF"} intensity={2} position={[-2, 6, 1]} />

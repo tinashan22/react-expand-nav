@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import React, { useRef } from "react";
-import { useGLTF, Text, MeshTransmissionMaterial } from "@react-three/drei";
+import { useGLTF, Image, MeshTransmissionMaterial } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useControls } from "leva";
@@ -46,15 +46,15 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
   //   });
 
   const materialProps = {
-    thickness: 0.1,
+    thickness: 1.5,
 
-    roughness: 0.1,
+    roughness: 0.15,
 
     transmission: 1,
 
-    ior: 0.1,
+    ior: 2.5,
 
-    chromaticAberration: 0.8,
+    chromaticAberration: 0.45,
 
     backside: true,
   };
@@ -70,9 +70,11 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
       >
         hello world!
       </Text> */}
+      <Image position={[0, -0.25, -1]} scale={[6, 8]} url="/bg2.png"></Image>
 
       <mesh
         ref={torus}
+        // position={[0, 0.75, 0]}
         rotation={[0, 0, angle]}
         geometry={nodes.Torus002.geometry}
         material={materials["Material.001"]}
